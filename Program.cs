@@ -22,8 +22,8 @@ namespace TextGame
             }
             var player = new Player(playerName);
             Console.WriteLine(Text.Language.Welcome, player.CName);
+            var house = new House(player);
             Console.ReadKey();
-                        
         }
     }
 }
