@@ -12,11 +12,13 @@ namespace TextGame
             // Asking Player Name
             Console.WriteLine("Hello Player, What Is Your Name ? ");
             var playerName = Console.ReadLine();
+            // Checking if the player name is empty
             if(playerName == string.Empty){
                 playerName = "No Name";
             }
-            Console.WriteLine($"Welcome, {playerName} to OOP Adventure.");
-            Console.ReadKey(); 
+            var player = new Player(playerName);
+            Console.WriteLine($"Welcome, {player.CName} to OOP Adventure.");
+            Console.ReadKey();
                         
         }
     }
