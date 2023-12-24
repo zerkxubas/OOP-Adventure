@@ -9,19 +9,19 @@ namespace TextGame
     {
         static void Main(string[] args)
         {
-            // Using English Language Class
-            var language = new English();
-            
-            // Asking Player Name by accessing The Protected field.
-            Console.WriteLine(language.ChooseYourName);
+            // Using Text class with method LoadLanguage and passing English Language Class
+            Text.LoadLanguage(new English());
+
+            // Asking Player Name by accessing The Protected field from Text class method Language.
+            Console.WriteLine(Text.Language.ChooseYourName);
             var playerName = Console.ReadLine();
 
             // Checking if the player name is empty
             if(playerName == string.Empty){
-                playerName = "No Name";
+                playerName = Text.Language.DefaultName;
             }
             var player = new Player(playerName);
-            Console.WriteLine($"Welcome, {player.CName} to OOP Adventure.");
+            Console.WriteLine(Text.Language.Welcome, player.CName);
             Console.ReadKey();
                         
         }
