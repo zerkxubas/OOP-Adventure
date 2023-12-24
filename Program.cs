@@ -9,9 +9,13 @@ namespace TextGame
     {
         static void Main(string[] args)
         {
-            // Asking Player Name
-            Console.WriteLine("Hello Player, What Is Your Name ? ");
+            // Using English Language Class
+            var language = new English();
+            
+            // Asking Player Name by accessing The Protected field.
+            Console.WriteLine(language.ChooseYourName);
             var playerName = Console.ReadLine();
+
             // Checking if the player name is empty
             if(playerName == string.Empty){
                 playerName = "No Name";
